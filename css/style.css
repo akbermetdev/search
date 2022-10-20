@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+ul, ol.li {
+  list-style: none;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
