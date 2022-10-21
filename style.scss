@@ -3,5 +3,104 @@
 @import "media";
 
 
+#header{
+  background: black;
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo{
+      font-weight: 700;
+      font-size: 24px;
+      color: #FFFFFF;
+    }
+    &__search{
+      padding: 10px 0;
+      &--input{
+        width: 350px;
+        height: 51px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 41px;
+        background: transparent;
+        font-weight: 500;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+
+        &__icons{
+          position: absolute;
+          top: 30px;
+          color: #FFFFFF;
+        }
+      }
+    }
+    &__menu{
+      &--item{
+        font-weight: 500;
+        font-size: 14px;
+        color: #EEB563;
+        padding: 0 10px;
+        transition: .4s;
+        & a:hover{
+          color: #EEB563;
+          border-bottom: 2px solid  #EEB563;
+        }
+      }
+    }
+    &__icon{
+      color: #FFFFFF;
+
+    }
+  }
+}
+
+#hero{
+  background: black;
+  min-height: 100vh;
+  .hero{
+    &__title{
+      font-weight: 500;
+      font-size: 20px;
+      color: #EEB563;
+      text-align: center;
+      padding: 40px 0;
+    }
+    &__img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      &--titles{
+        font-weight: 500;
+        font-size: 96px;
+        color: #FFFFFF;
+      }
+    }
+    &__content{
+      &--title{
+        font-weight: 400;
+        font-size: 16px;
+        color: #FFFFFF;
+        padding: 10px 0;
+      }
+    }
+    &__border{
+      position: absolute;
+      top: 850px;
+      left: 90px;
+      width: 380px;
+      height: 103px;
+      border: 2px solid #FFFFFF;
+      border-radius: 70px;
+      transform: rotate(-90deg);
+    }
+    &__borders{
+      width: 89.44px;
+      height: 32.66px;
+      border: 1px solid #FFFFFF;
+      border-radius: 39px;
 
 
+    }
+  }
+}
