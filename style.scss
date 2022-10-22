@@ -548,6 +548,7 @@
         color: white;
         background: #FE773B;
         border-radius: 2px;
+        cursor: pointer;
         & ion-icon{
           font-size: 35px;
         }
@@ -555,5 +556,37 @@
     }
   }
 }
-
+#footer{
+  background: black;
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    h1{
+      @include title2;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: start;
+    }
+    &__nav{
+      display: flex;
+      a{
+        background: #767676;
+        margin: 0 5px;
+        padding: 10px;
+        :hover{
+          transition: .5s;
+          transform: scale(1.9) rotate(360deg);
+          color: lightblue;
+        }
+        ion-icon{
+          font-size: 20px;
+          color: white;
+        }
+      }
+    }
+  }
+}
 
