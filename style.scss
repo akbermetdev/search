@@ -39,7 +39,7 @@
   background: black;
 
   .collection {
-    .collection__title {
+    &__title {
       display: flex;
       flex-direction: column;
       align-content: center;
@@ -63,7 +63,7 @@
       }
     }
 
-    .collection__blocks {
+    &__blocks {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -163,6 +163,96 @@
       }
       &--button {
         @include btn;
+      }
+    }
+    &__modal{
+      z-index: 9;
+      display: none;
+      &--bg{
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.78);
+        position: fixed;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(4px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__square{
+          background: #be7a7a;
+          border: 2px solid #2435A1;
+          border-radius: 38px;
+          width: 1171px;
+          height: 603px;
+          overflow-y: scroll;
+          position: relative;
+          z-index: 15;
+          animation: .6s alternate key linear;
+          &--close{
+            position: fixed;
+            font-size: 50px;
+            color: wheat;
+            cursor: pointer;
+            top: 100px;
+            right: 210px;
+            animation :.5s alternate keys linear;
+            ion-icon{
+
+            }
+          }
+          p{
+            color: lightyellow;
+            font-family: "snell roundhand", cursive;
+            margin: 30px;
+            font-size: 40px;
+          }
+        }
+      }
+    }
+    &__modals{
+      z-index: 9;
+      display: none;
+      &--bg{
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.78);
+        position: fixed;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(4px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__square{
+          background: #be7a7a;
+          border: 2px solid #2435A1;
+          border-radius: 38px;
+          width: 1171px;
+          height: 603px;
+          overflow-y: scroll;
+          position: relative;
+          z-index: 15;
+          animation: .6s alternate key linear;
+          &--close{
+            position: fixed;
+            font-size: 50px;
+            color: wheat;
+            cursor: pointer;
+            top: 100px;
+            right: 210px;
+            animation :.5s alternate keys linear;
+            ion-icon{
+
+            }
+          }
+          p{
+            color: lightyellow;
+            font-family: "snell roundhand", cursive;
+            margin: 30px;
+            font-size: 40px;
+          }
+        }
       }
     }
   }
@@ -598,4 +688,55 @@
     }
   }
 }
-
+@keyframes key {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  25%{
+    opacity: 0.3;
+    transform: scale(0.3);
+  }
+  50%{
+    opacity: 0.6;
+    transform: scale(0.6);
+  }
+  75%{
+    opacity: 0.9;
+    transform: scale(0.9);
+  }
+  90%{
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes keys {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25%{
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  50%{
+    opacity: 0.9;
+    transform: scale(0.9);
+  }
+  75%{
+    opacity: 0.6;
+    transform: scale(0.6);
+  }
+  90%{
+    opacity: 0.3;
+    transform: scale(0.3);
+  }
+  100%{
+    opacity: 0;
+    transform: scale(0);
+  }
+}
