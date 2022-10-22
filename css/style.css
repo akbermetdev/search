@@ -21,7 +21,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-
 #collection {
   background: black;
 }
@@ -170,6 +169,8 @@ body {
   padding: 20px 40px;
   border: 1px solid #FFFFFF;
   border-radius: 36px;
+  cursor: pointer;
+}
 
 #header {
   background: black;
@@ -262,3 +263,72 @@ body {
   border-radius: 39px;
 }
 
+#create {
+  background: black;
+}
+#create .create__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  margin-right: 150px;
+}
+#create .create__title--circle {
+  width: 38px;
+  height: 66px;
+  border: 1px solid #FFF;
+  border-radius: 39px;
+  width: 199px;
+  height: 47px;
+  margin-bottom: 90px;
+}
+#create .create__title--block h1 {
+  color: #F7A659;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+#create .create__title--block h2 {
+  color: #FFF;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  font-family: "inter", sans-serif;
+}
+#create .create__title--circle2 {
+  width: 38px;
+  height: 66px;
+  border: 1px solid #FFF;
+  border-radius: 39px;
+  width: 32px;
+  height: 31px;
+  margin-top: 100px;
+}
+#create .create__block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 70px;
+}
+#create .create__block h1 {
+  color: #FFF;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  font-family: "inter", sans-serif;
+  position: absolute;
+  bottom: 170px;
+  left: 140px;
+  font-size: 52px;
+}
+#create .create__block svg {
+  position: absolute;
+  bottom: 5px;
+  left: 190px;
+  transform: rotate(45deg);
+}
+
+/*# sourceMappingURL=style.css.map */
