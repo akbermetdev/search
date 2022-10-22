@@ -21,6 +21,19 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+@media (max-width: 1440px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 1024px) {
+  .collection__title select {
+    margin-left: 359px !important;
+  }
+  .create__block img {
+    width: 100%;
+  }
+}
 #collection {
   background: black;
 }
@@ -343,10 +356,6 @@ body {
   font-weight: 500;
   font-size: 20px;
 }
-#cetting .cetting__title h1 svg {
-  position: relative;
-  margin-left: 36px;
-}
 #cetting .cetting__title h2 {
   color: #FFF;
   font-weight: 500;
@@ -355,7 +364,10 @@ body {
   text-align: center;
   font-family: "inter", sans-serif;
 }
-#cetting .cetting__title svg {
+#cetting .cetting__title--star {
+  position: relative;
+}
+#cetting .cetting__title--star svg {
   position: absolute;
   right: 40px;
 }
@@ -538,6 +550,7 @@ body {
   justify-content: space-between;
 }
 #cetting .cetting__searcher h1 {
+  display: flex;
   color: #FFF;
   font-weight: 500;
   font-size: 40px;
@@ -639,6 +652,23 @@ body {
 #footer .footer__nav a ion-icon {
   font-size: 20px;
   color: white;
+}
+#footer .footer__subtitle {
+  display: flex;
+  align-items: center;
+}
+#footer .footer__subtitle h2 {
+  color: #FFF;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  font-family: "inter", sans-serif;
+  font-size: 40px;
+  margin-right: 10px;
+}
+#footer .footer__subtitle h2 svg {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

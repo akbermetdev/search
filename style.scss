@@ -217,7 +217,6 @@
     }
   }
 }
-
 #hero{
   background: black;
   min-height: 100vh;
@@ -266,7 +265,6 @@
     }
   }
 }
-
 #create{
   background: black;
   .create{
@@ -319,25 +317,23 @@
     }
   }
 }
-
 #cetting{
   background: black;
   .cetting{
     &__title{
       padding: 40px;
-      & h1{
+      h1{
         @include title;
-        & svg{
-          position: relative;
-          margin-left: 36px;
-        }
       }
       & h2{
         @include title2
       }
-      & svg{
-        position: absolute;
-        right: 40px;
+      &--star{
+        position: relative;
+        & svg{
+          position: absolute;
+          right: 40px;
+        }
       }
     }
     &__subtitle{
@@ -500,6 +496,7 @@
       display: flex;
       justify-content: space-between;
       & h1{
+        display: flex;
         @include title2;
         font-size: 58px;
         & span{
@@ -584,6 +581,18 @@
         ion-icon{
           font-size: 20px;
           color: white;
+        }
+      }
+    }
+    &__subtitle{
+      display: flex;
+      align-items: center;
+      h2{
+        @include title2;
+        font-size: 40px;
+        margin-right: 10px;
+        svg{
+          margin-bottom: 20px;
         }
       }
     }
