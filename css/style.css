@@ -37,20 +37,20 @@ body {
 #collection {
   background: black;
 }
-#collection .collection .collection__title {
+#collection .collection__title {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
 }
-#collection .collection .collection__title h1 {
+#collection .collection__title h1 {
   color: #F7A659;
   text-align: center;
   font-weight: 500;
   font-size: 20px;
   padding-top: 30px;
 }
-#collection .collection .collection__title h2 {
+#collection .collection__title h2 {
   color: #FFF;
   font-weight: 500;
   font-size: 40px;
@@ -58,7 +58,7 @@ body {
   text-align: center;
   font-family: "inter", sans-serif;
 }
-#collection .collection .collection__title select {
+#collection .collection__title select {
   color: #F7A659;
   text-align: center;
   font-weight: 500;
@@ -68,12 +68,12 @@ body {
   width: 220px;
   margin-left: 455px;
 }
-#collection .collection .collection__blocks {
+#collection .collection__blocks {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-#collection .collection .collection__blocks .collection__blocks--block {
+#collection .collection__blocks .collection__blocks--block {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,7 +84,7 @@ body {
   border-radius: 13px;
   margin: 15px;
 }
-#collection .collection .collection__blocks .collection__blocks--block .collection__numbers {
+#collection .collection__blocks .collection__blocks--block .collection__numbers {
   color: #FFF;
   font-weight: 500;
   font-size: 40px;
@@ -94,10 +94,10 @@ body {
   font-size: 20px;
   margin-left: 5px;
 }
-#collection .collection .collection__blocks .collection__blocks--block .collection-image {
+#collection .collection__blocks .collection__blocks--block .collection-image {
   position: relative;
 }
-#collection .collection .collection__blocks .collection__blocks--block .collection-image .collection-circle {
+#collection .collection__blocks .collection__blocks--block .collection-image .collection-circle {
   position: absolute;
   top: 1px;
   right: 5px;
@@ -107,14 +107,14 @@ body {
   border: 1px solid #FFFFFF;
   border-radius: 50%;
 }
-#collection .collection .collection__blocks .collection__blocks--block .collection-image ion-icon {
+#collection .collection__blocks .collection__blocks--block .collection-image ion-icon {
   position: absolute;
   color: #0C7BFE;
   bottom: 3px;
   right: 0;
   font-size: 21px;
 }
-#collection .collection .collection__blocks .collection__blocks--block .collection__subtitle h1 {
+#collection .collection__blocks .collection__blocks--block .collection__subtitle h1 {
   color: #FFF;
   font-weight: 500;
   font-size: 40px;
@@ -123,7 +123,7 @@ body {
   font-family: "inter", sans-serif;
   font-size: 18px;
 }
-#collection .collection .collection__blocks .collection__blocks--block .collection__subtitle p {
+#collection .collection__blocks .collection__blocks--block .collection__subtitle p {
   color: #FFF;
   font-weight: 500;
   font-size: 40px;
@@ -136,26 +136,26 @@ body {
   line-height: 5px;
   margin-bottom: 15px;
 }
-#collection .collection .collection__blocks .collection__blocks--block .collection__block--subtitle {
+#collection .collection__blocks .collection__blocks--block .collection__block--subtitle {
   display: flex;
   flex-direction: column;
   align-items: end;
   margin-right: 15px;
 }
-#collection .collection .collection__blocks .collection__blocks--block .collection__block--subtitle h1 {
+#collection .collection__blocks .collection__blocks--block .collection__block--subtitle h1 {
   font-weight: 500;
   font-size: 13px;
   color: #21D605;
   margin-bottom: 3px;
 }
-#collection .collection .collection__blocks .collection__blocks--block .collection__block--subtitle h2 {
+#collection .collection__blocks .collection__blocks--block .collection__block--subtitle h2 {
   color: #F7A659;
   text-align: center;
   font-weight: 500;
   font-size: 20px;
   font-size: 13px;
 }
-#collection .collection .collection__blocks .collection__blocks--block .collection__block--subtitle ion-icon {
+#collection .collection__blocks .collection__blocks--block .collection__block--subtitle ion-icon {
   color: #C5C5C5;
 }
 #collection .collection__btn {
@@ -183,6 +183,90 @@ body {
   border: 1px solid #FFFFFF;
   border-radius: 36px;
   cursor: pointer;
+}
+#collection .collection__modal {
+  z-index: 9;
+  display: none;
+}
+#collection .collection__modal--bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.78);
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#collection .collection__modal--bg__square {
+  background: #be7a7a;
+  border: 2px solid #2435A1;
+  border-radius: 38px;
+  width: 1171px;
+  height: 603px;
+  overflow-y: scroll;
+  position: relative;
+  z-index: 15;
+  animation: 0.6s alternate key linear;
+}
+#collection .collection__modal--bg__square--close {
+  position: fixed;
+  font-size: 50px;
+  color: wheat;
+  cursor: pointer;
+  top: 100px;
+  right: 210px;
+  animation: 0.5s alternate keys linear;
+}
+#collection .collection__modal--bg__square p {
+  color: lightyellow;
+  font-family: "snell roundhand", cursive;
+  margin: 30px;
+  font-size: 40px;
+}
+#collection .collection__modals {
+  z-index: 9;
+  display: none;
+}
+#collection .collection__modals--bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.78);
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#collection .collection__modals--bg__square {
+  background: #be7a7a;
+  border: 2px solid #2435A1;
+  border-radius: 38px;
+  width: 1171px;
+  height: 603px;
+  overflow-y: scroll;
+  position: relative;
+  z-index: 15;
+  animation: 0.6s alternate key linear;
+}
+#collection .collection__modals--bg__square--close {
+  position: fixed;
+  font-size: 50px;
+  color: wheat;
+  cursor: pointer;
+  top: 100px;
+  right: 210px;
+  animation: 0.5s alternate keys linear;
+}
+#collection .collection__modals--bg__square p {
+  color: lightyellow;
+  font-family: "snell roundhand", cursive;
+  margin: 30px;
+  font-size: 40px;
 }
 
 #header {
@@ -669,6 +753,59 @@ body {
 }
 #footer .footer__subtitle h2 svg {
   margin-bottom: 20px;
+}
+
+@keyframes key {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  25% {
+    opacity: 0.3;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.6);
+  }
+  75% {
+    opacity: 0.9;
+    transform: scale(0.9);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes keys {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(0.9);
+  }
+  75% {
+    opacity: 0.6;
+    transform: scale(0.6);
+  }
+  90% {
+    opacity: 0.3;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
