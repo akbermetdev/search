@@ -210,51 +210,6 @@
         }
       }
     }
-    &__modals{
-      z-index: 9;
-      display: none;
-      &--bg{
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.78);
-        position: fixed;
-        top: 0;
-        left: 0;
-        backdrop-filter: blur(4px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &__square{
-          background: #be7a7a;
-          border: 2px solid #2435A1;
-          border-radius: 38px;
-          width: 1171px;
-          height: 603px;
-          overflow-y: scroll;
-          position: relative;
-          z-index: 15;
-          animation: .6s alternate key linear;
-          &--close{
-            position: fixed;
-            font-size: 50px;
-            color: wheat;
-            cursor: pointer;
-            top: 100px;
-            right: 210px;
-            animation :.5s alternate keys linear;
-            ion-icon{
-
-            }
-          }
-          p{
-            color: lightyellow;
-            font-family: "snell roundhand", cursive;
-            margin: 30px;
-            font-size: 40px;
-          }
-        }
-      }
-    }
   }
 }
 #header{
