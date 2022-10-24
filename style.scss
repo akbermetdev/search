@@ -2,6 +2,11 @@
 @import "variables";
 @import "media";
 
+.scroll{
+  overflow: hidden;
+  width: 100%;
+}
+
 @mixin title($title: #F7A659) {
   color: $title;
   text-align: center;
@@ -78,6 +83,10 @@
         border: 1px solid #BCBCBC;
         border-radius: 13px;
         margin: 15px;
+        :hover{
+          transition: .4s;
+          transform: scale(1.1);
+        }
 
         .collection__numbers {
           @include title2;
@@ -332,7 +341,11 @@
       justify-content: center;
       position: relative;
       top: -300px;
-
+      :hover{
+        transition: .5s;
+        transform: rotate(-360deg) ;
+        box-shadow: 5px 5px 5px #000000;
+      }
       &--one {
         position: absolute;
 
@@ -422,52 +435,44 @@
       }
     }
 
-    &__card {
-      padding: 10px 10px;
+    .cards{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+       &__block {
+         position: relative;
 
-      &--one {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+         img{
+           width: 300px;
+           height: 450px;
+         }
+         &--title {
+           position: absolute;
+           bottom: 50px;
+           display: flex;
+           align-items: center;
+           flex-direction: column;
+           left: 12%;
 
-      &--titless {
+           h1 {
+             @include title2;
+             font-size: 25px;
+           }
 
-        margin-top: -200px;
-        margin-left: 50px;
+           p {
+             font-weight: 600;
+             font-size: 12px;
+             color: #FFFFFF;
+             text-align: center;
+             margin: 10px 0;
+           }
 
-        h2 {
-          font-weight: 600;
-          font-size: 29px;
-          line-height: 35px;
-          color: #FFFFFF;
-          text-align: center;
-
-        }
-
-      }
-
-      h6 {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-        color: #FFFFFF;
-        text-align: center;
-        padding: 10px;
-      }
-
-      button {
-        width: 72.39px;
-        height: 39.59px;
-        background: #FE8B46;
-        border: 1px solid #FFFFFF;
-        border-radius: 40px;
-        font-weight: 500;
-        font-size: 14px;
-        color: #FFFFFF;
-        margin-left: 120px;
-      }
+           button {
+             @include btn;
+             background: #F7A659;
+           }
+         }
+       }
     }
 
     &__ai {
@@ -508,7 +513,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
     position: relative;
 
 
@@ -527,6 +531,11 @@
       flex-wrap: wrap;
       justify-content: center;
       padding-bottom: 100px;
+      :hover{
+        transition: .4s;
+        border-radius: 15px;
+        transform: scale(1.1);
+      }
 
       &--block {
         margin: 14px;
@@ -986,6 +995,7 @@
         border: 1px solid #B5B5B5;
         border-radius: 9px;
         background: transparent;
+        color: white;
       }
 
       &--ion {
@@ -1110,4 +1120,25 @@
     opacity: 0;
     transform: scale(0);
   }
+}
+.swiper {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }

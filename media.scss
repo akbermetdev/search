@@ -149,6 +149,18 @@
     }
   }
   .hero{
+    &__logo{
+      flex-direction: column;
+      h3{
+        margin: 10px 0;
+      }
+    }
+    &__logos{
+      flex-direction: column;
+      img{
+        margin: 10px 0;
+      }
+    }
     &__borders{
       left: 400px !important;
     }
@@ -224,6 +236,11 @@
 }
 
 @media(max-width: 451px) {
+  .hero {
+    &__logo {
+      padding: 0 !important;
+    }
+  }
   .collection {
     &__title {
       select {
@@ -251,6 +268,27 @@
     }
   }
 }
+@media(max-width: 415px){
+  .hero{
+    &__borders{
+      left: 320px !important;
+    }
+    &__card{
+      top: -133px !important;
+    }
+  }
+  .collection{
+    &__blocks{
+      &--block{
+        &__subtitle{
+          h1{
+            font-size: 14px !important;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media(max-width: 400px) {
   .hero{
@@ -268,6 +306,7 @@
       margin-left: 0 !important;
       left: 100px !important;
     }
+
     &__logos{
       margin: 10px;
     }
@@ -282,27 +321,25 @@
     }
   }
   .collection {
-    &__subtitle {
-      h1 {
-        font-size: 12px !important;
 
-      }
-
-      p {
-        font-size: 12px !important;
+    &__blocks{
+      &--block{
+        &__subtitle{
+          h1{
+            font-size: 12px !important;
+          }
+          p{
+            font-size: 12px !important;
+          }
+        }
       }
     }
-
-    &__block {
-      &--subtitle {
-        h1 {
-          font-size: 10px !important;
-        }
-
-        h2 {
-          font-size: 10px !important;
-        }
+    .collection-image{
+      img{
+        margin: 0 5px;
       }
+    }
+    &__block{
     }
   }
   .create {
@@ -400,6 +437,11 @@
 }
 
 @media(max-width: 320px) {
+  .hero {
+    &__borders {
+      top: 630px !important;
+    }
+  }
   .header {
     &__logo{
       font-size: 16px !important;
@@ -407,6 +449,17 @@
     &__search{
       &--input{
         width: 120px !important;
+      }
+    }
+  }
+
+  .foremost {
+    .cards {
+      &__block {
+        img {
+          width: 276px !important;
+          height: 382px !important;
+        }
       }
     }
   }

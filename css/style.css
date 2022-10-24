@@ -108,6 +108,18 @@ body {
     width: 140px !important;
     height: 36px !important;
   }
+  .hero__logo {
+    flex-direction: column;
+  }
+  .hero__logo h3 {
+    margin: 10px 0;
+  }
+  .hero__logos {
+    flex-direction: column;
+  }
+  .hero__logos img {
+    margin: 10px 0;
+  }
   .hero__borders {
     left: 400px !important;
   }
@@ -159,6 +171,9 @@ body {
   }
 }
 @media (max-width: 451px) {
+  .hero__logo {
+    padding: 0 !important;
+  }
   .collection__title select {
     margin-left: 88px !important;
   }
@@ -172,6 +187,17 @@ body {
   .cetting__btn--circle {
     height: 50px !important;
     width: 22px !important;
+  }
+}
+@media (max-width: 415px) {
+  .hero__borders {
+    left: 320px !important;
+  }
+  .hero__card {
+    top: -133px !important;
+  }
+  .collection__blocks--block__subtitle h1 {
+    font-size: 14px !important;
   }
 }
 @media (max-width: 400px) {
@@ -198,17 +224,14 @@ body {
   .hero__img--titles {
     font-size: 25px !important;
   }
-  .collection__subtitle h1 {
+  .collection__blocks--block__subtitle h1 {
     font-size: 12px !important;
   }
-  .collection__subtitle p {
+  .collection__blocks--block__subtitle p {
     font-size: 12px !important;
   }
-  .collection__block--subtitle h1 {
-    font-size: 10px !important;
-  }
-  .collection__block--subtitle h2 {
-    font-size: 10px !important;
+  .collection .collection-image img {
+    margin: 0 5px;
   }
   .create__title h2 {
     font-size: 23px !important;
@@ -258,11 +281,18 @@ body {
   }
 }
 @media (max-width: 320px) {
+  .hero__borders {
+    top: 630px !important;
+  }
   .header__logo {
     font-size: 16px !important;
   }
   .header__search--input {
     width: 120px !important;
+  }
+  .foremost .cards__block img {
+    width: 276px !important;
+    height: 382px !important;
   }
   .discover__blocks--block img {
     margin: 0 5px;
@@ -284,6 +314,11 @@ body {
     margin-left: 5px;
   }
 }
+.scroll {
+  overflow: hidden;
+  width: 100%;
+}
+
 #collection {
   background: black;
 }
@@ -333,6 +368,10 @@ body {
   border: 1px solid #BCBCBC;
   border-radius: 13px;
   margin: 15px;
+}
+#collection .collection__blocks--block :hover {
+  transition: 0.4s;
+  transform: scale(1.1);
 }
 #collection .collection__blocks--block .collection__numbers {
   color: #FFF;
@@ -570,6 +609,11 @@ body {
   position: relative;
   top: -300px;
 }
+#hero .hero__card :hover {
+  transition: 0.5s;
+  transform: rotate(-360deg);
+  box-shadow: 5px 5px 5px #000000;
+}
 #hero .hero__card--one {
   position: absolute;
 }
@@ -642,44 +686,52 @@ body {
   color: #FFFFFF;
   text-align: center;
 }
-#foremost .foremost__card {
-  padding: 10px 10px;
-}
-#foremost .foremost__card--one {
-  position: relative;
+#foremost .foremost .cards {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
-#foremost .foremost__card--titless {
-  margin-top: -200px;
-  margin-left: 50px;
+#foremost .foremost .cards__block {
+  position: relative;
 }
-#foremost .foremost__card--titless h2 {
-  font-weight: 600;
-  font-size: 29px;
-  line-height: 35px;
-  color: #FFFFFF;
-  text-align: center;
+#foremost .foremost .cards__block img {
+  width: 300px;
+  height: 450px;
 }
-#foremost .foremost__card h6 {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  color: #FFFFFF;
-  text-align: center;
-  padding: 10px;
+#foremost .foremost .cards__block--title {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  left: 12%;
 }
-#foremost .foremost__card button {
-  width: 72.39px;
-  height: 39.59px;
-  background: #FE8B46;
-  border: 1px solid #FFFFFF;
-  border-radius: 40px;
+#foremost .foremost .cards__block--title h1 {
+  color: #FFF;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  font-family: "inter", sans-serif;
+  font-size: 25px;
+}
+#foremost .foremost .cards__block--title p {
+  font-weight: 600;
+  font-size: 12px;
   color: #FFFFFF;
-  margin-left: 120px;
+  text-align: center;
+  margin: 10px 0;
+}
+#foremost .foremost .cards__block--title button {
+  background: transparent;
+  font-weight: 400;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 20px 40px;
+  border: 1px solid #FFFFFF;
+  border-radius: 36px;
+  cursor: pointer;
+  background: #F7A659;
 }
 #foremost .foremost__ai {
   position: absolute;
@@ -715,7 +767,6 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
   position: relative;
 }
 
@@ -731,6 +782,11 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 100px;
+}
+#discover .discover__blocks :hover {
+  transition: 0.4s;
+  border-radius: 15px;
+  transform: scale(1.1);
 }
 #discover .discover__blocks--block {
   margin: 14px;
@@ -1182,6 +1238,7 @@ body {
   border: 1px solid #B5B5B5;
   border-radius: 9px;
   background: transparent;
+  color: white;
 }
 #cetting .cetting__input--ion {
   position: absolute;
@@ -1303,6 +1360,27 @@ body {
     opacity: 0;
     transform: scale(0);
   }
+}
+.swiper {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
